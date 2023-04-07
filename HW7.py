@@ -63,7 +63,7 @@ def make_players_table(data, cur, conn):
         nationality = value['nationality']
         cur.execute('INSERT OR IGNORE INTO Players (id, name, position_id, birthyear, nationality) VALUES (?, ?, ?, ?, ?)', 
             (id, name, position_id, birthyear, nationality))
-    #conn.commit()
+    conn.commit()
     pass
 
 ## [TASK 2]: 10 points

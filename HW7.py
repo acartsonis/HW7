@@ -129,14 +129,14 @@ def birthyear_nationality_search(age, country, cur, conn):
     # the player’s name, position, and birth year. 
     # HINT: You'll have to use JOIN for this task.
 
-def position_birth_search(position, age, cur, conn):
-       list = []
-       year = 2023 - age
-       cur.execute("SELECT Players.name, Players.birthyear FROM Players JOIN Positions ON Players.position_id = Positions.id WHERE Positions.position = ? AND Players.birthyear > ?", (position, year,))
-       for row in cur.fetchall():
-           list.append((row[0], position, row[1]))
-       conn.commit()
-       return  list
+# def position_birth_search(position, age, cur, conn):
+#        list = []
+#        year = 2023 - age
+#        cur.execute("SELECT Players.name, Players.birthyear FROM Players JOIN Positions ON Players.position_id = Positions.id WHERE Positions.position = ? AND Players.birthyear > ?", (position, year,))
+#        for row in cur.fetchall():
+#            list.append((row[0], position, row[1]))
+#        conn.commit()
+#        return  list
        pass
 
 

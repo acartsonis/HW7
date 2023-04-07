@@ -82,8 +82,8 @@ def nationality_search(countries, cur, conn):
         cur.execute("SELECT name, position_id, nationality FROM Players WHERE Players.nationality = ?", (country,)) #is this a thing
         for row in cur.fetchall(): #row (name, position_id, nationality) 
             list.append((row[0], row[1], row[2])) 
-    #conn.commit()
-    #return list
+    conn.commit()
+    return list
     pass
 
 ## [TASK 3]: 10 points
